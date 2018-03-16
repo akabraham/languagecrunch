@@ -1,7 +1,7 @@
 # Classifier classifies given sentence into following types
 SENTENCE_TYPE = {
     "ASSERTIVE": "assertive",
-    "NEGATIVE""": "negative",
+    "NEGATIVE": "negative",
     "INTERROGATIVE": "interrogative",
     "IMPERATIVE": "imperative",
     "EXCLAMATORY": "exclamatory"
@@ -169,6 +169,7 @@ def getTag(taggedWords, position):
 
 
 def getWord(taggedWords, position):
+    word = None
     if len(taggedWords) > position and taggedWords[position]:
         word = taggedWords[position].string.strip().lower()
     return word
